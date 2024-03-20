@@ -1,14 +1,26 @@
 public class LogLevels {
     
     public static String message(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLine.message() method");
+        logLine = logLine.substring(logLine.indexOf(':')+1);
+        return logLine.trim();
     }
 
     public static String logLevel(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLine.logLevel() method");
+        logLine = logLine.substring(0,logLine.indexOf(']'));
+        logLine = logLine.substring(logLine.indexOf('[')+1);
+        return logLine.toLowerCase().trim();
     }
 
     public static String reformat(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLine.reformat() method");
+        String tipus, message, logMessage;
+
+        message = logLine.substring(logLine.indexOf(':')+1);
+        message.trim();
+
+        tipus = logLine.substring(0,logLine.indexOf(']'));
+        tipus = logLine.substring(logLine.indexOf('[')+1);
+        tipus.toLowerCase();
+
+        return (message + "(" + tipus + ")");
     }
 }
