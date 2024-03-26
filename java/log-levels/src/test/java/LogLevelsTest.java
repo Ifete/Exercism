@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class LogLevelsTest {
-    @Test
+    @org.junit.Test
     @Tag("task:1")
     @DisplayName("The message method returns the log line's message of an error log")
     public void error_message() {

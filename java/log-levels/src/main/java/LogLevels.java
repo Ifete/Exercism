@@ -13,14 +13,16 @@ public class LogLevels {
 
     public static String reformat(String logLine) {
         String tipus, message, logMessage;
+        logMessage = logLine;
+        tipus = logMessage.substring(0,logMessage.indexOf(']'));
+        tipus = tipus.substring(tipus.indexOf('[')+1);
+
 
         message = logLine.substring(logLine.indexOf(':')+1);
-        message.trim();
 
-        tipus = logLine.substring(0,logLine.indexOf(']'));
-        tipus = logLine.substring(logLine.indexOf('[')+1);
-        tipus.toLowerCase();
 
-        return (message + "(" + tipus + ")");
+
+
+        return (message.trim() + " (" + tipus.toLowerCase() + ")");
     }
 }

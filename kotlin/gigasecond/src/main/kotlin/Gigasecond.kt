@@ -4,8 +4,7 @@ class Gigasecond {
 
     // TODO: Implement proper constructor
 
-    val date: LocalDateTime (startDateTime: LocalDateTime){
+    val date: LocalDateTime;
 
-        currentDatetime:  LocalDateTime = new LocalDateTime();
-    }
+
 }
