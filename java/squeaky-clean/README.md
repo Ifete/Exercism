@@ -36,6 +36,7 @@ Implement the (_static_) `SqueakyClean.clean()` method to replace any spaces wit
 ```java
 SqueakyClean.clean("my   Id");
 // => "my___Id"
+
 ```
 
 ## 2. Convert kebab-case to camelCase
